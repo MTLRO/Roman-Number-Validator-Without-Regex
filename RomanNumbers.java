@@ -1,4 +1,7 @@
-    public static boolean romanNumberValidator(String number) {
+public class RomanNumbers {
+
+
+public static boolean romanNumberValidator(String number) {
 
         //Test empty string
         if (number.isEmpty()) {
@@ -222,3 +225,4 @@
         }
         return index;
     } //helper
+}
