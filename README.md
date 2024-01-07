@@ -17,7 +17,8 @@ If one of the following conditions where met, the method would automatically ret
   - after the combination XC, the letters C,D,M or L.
   - L,C,D or M after L.
   - D or M after D.
-I really think these conditions can be reduced, i.e having less but more robust conditions.
+  
+  I really think these conditions can be reduced, i.e having less but more robust conditions.
 
 Basically, at each letter, these conditions are tested (method: validatorHelper). There is an array contained "banned letters", and an array that contains the counts for each letter
 and an extra slot containing -1. This slot has index 7.
