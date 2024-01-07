@@ -21,6 +21,63 @@ public class RomanNumbers {
         return result.toString();
     } //convert integer to roman
 
+     public static int romanToInt(String s) {
+        int sum = 0;
+        int i = 0;
+        while (i < s.length()) {
+            char c = s.charAt(i);
+
+            char next = '.';
+            if (i + 1 < s.length()) {
+                next = s.charAt(i + 1);
+            }
+            if (c == 'M') {
+                sum = sum + 1000;
+            } else if (c == 'D') {
+                sum = sum + 500;
+            } else if (c == 'C') {
+                if (next == 'D') {
+                    sum = sum + 400;
+                    i++;
+                } else if (next == 'M') {
+                    sum = sum + 900;
+                    i++;
+                } else {
+                    sum = sum + 100;
+                }
+            } else if (c == 'L') {
+                sum = sum + 50;
+            }
+
+            if (c == 'X') {
+                if (next == 'L') {
+                    sum = sum + 40;
+                    i++;
+                } else if (next == 'C') {
+                    sum = sum + 90;
+                    i++;
+                } else {
+                    sum = sum + 10;
+                }
+            } else if (c == 'V') {
+                sum = sum + 5;
+            } else if (c == 'I') {
+                if (next == 'X') {
+
+                    sum = sum + 9;
+                    i++;
+                } else if (next == 'V') {
+                    sum = sum + 4;
+                    i++;
+                } else {
+                    sum = sum + 1;
+                }
+            }
+            i++;
+        }
+        return sum;
+    }
+
     public static int getRomanValue(String symbol) {
         switch (symbol) {
             case "I":
@@ -364,62 +421,7 @@ public class RomanNumbers {
         return index;
     } //helper
 
-    public static int romanToInt(String s) {
-        int sum = 0;
-        int i = 0;
-        while (i < s.length()) {
-            char c = s.charAt(i);
-
-            char next = '.';
-            if (i + 1 < s.length()) {
-                next = s.charAt(i + 1);
-            }
-            if (c == 'M') {
-                sum = sum + 1000;
-            } else if (c == 'D') {
-                sum = sum + 500;
-            } else if (c == 'C') {
-                if (next == 'D') {
-                    sum = sum + 400;
-                    i++;
-                } else if (next == 'M') {
-                    sum = sum + 900;
-                    i++;
-                } else {
-                    sum = sum + 100;
-                }
-            } else if (c == 'L') {
-                sum = sum + 50;
-            }
-
-            if (c == 'X') {
-                if (next == 'L') {
-                    sum = sum + 40;
-                    i++;
-                } else if (next == 'C') {
-                    sum = sum + 90;
-                    i++;
-                } else {
-                    sum = sum + 10;
-                }
-            } else if (c == 'V') {
-                sum = sum + 5;
-            } else if (c == 'I') {
-                if (next == 'X') {
-
-                    sum = sum + 9;
-                    i++;
-                } else if (next == 'V') {
-                    sum = sum + 4;
-                    i++;
-                } else {
-                    sum = sum + 1;
-                }
-            }
-            i++;
-        }
-        return sum;
-    }
+   
 }
 
 //Next
