@@ -2,15 +2,15 @@ When I started this project, I did not know what were regular expressions in cod
 
 If one of the following conditions where met, the method would automatically return false:
 
--Empty String
--If these special cases occured:
+- Empty String 
+- If these special cases occured:
   - XL or XC is preceded by a character other than C, M, D and was not at the beginning of the string.
   - CD or CM is preceded by a character other than M and was not at the beginning of the string.
   - the patterns IVI,IXI,XLX,XCX,CDC,CMC occur.
   - three I's in a row but the string does not end after that.
   - IV or IX not occuring at the end of the string.
   - a letter appearing more than 4 times.
--If certain letters appear after a specific letter:
+- If certain letters appear after a specific letter:
   - L,C,D or M after I.
   - D or M after X.
   - any letter except I after V.
