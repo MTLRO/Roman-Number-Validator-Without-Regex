@@ -27,4 +27,7 @@ This way, after each letter, the count is increased.
 
 The main function simply iterates through the string and applies this helper function until an invalidating condition is met or the end of the string is reached.
 
+My next step is to change the way the bannedLetters array works. The issue is that letters are added to the array even If they are already in it.
+My idea is to make the array contain a bit for each letter. (1 = banned, 0 = not banned). This way there no duplicate letters are added.
+
     
