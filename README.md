@@ -1,3 +1,5 @@
+An application that will tell you if the string you passed as input is a valid roman numeral or not and will tell you how to write the number you wanted in a correct way if it was wrong.
+
 When I started this project, I did not know what were regular expressions in coding. I used Arrays and ArrayLists and simple java methods to iterate through a string passed as input. 
 
 If one of the following conditions where met, the method would automatically return false:
