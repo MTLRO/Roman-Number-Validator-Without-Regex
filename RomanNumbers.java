@@ -324,10 +324,6 @@ public class RomanNumbers {
         if (currentLetter == 'X' && next != '.' && prev == 'I') {
             return -1;
         }
-        //Cannot have more than one M in the middle of a string.
-        if (currentLetter == 'M' && next == 'M' && prev != '.') {
-            return -1;
-        }
 
         //If letters appear more than four times, incorrect. Exception M as it is the last roman numeral.
         if (prev == currentLetter && sCount > 3 && currentLetter != 'M') {
