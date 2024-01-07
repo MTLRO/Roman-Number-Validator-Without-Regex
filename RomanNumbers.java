@@ -115,7 +115,7 @@ public class RomanNumbers {
         if (count == 0) {
             System.out.println("No contradictions.");
         }
-    } //Tests 400 random "roman" strings, outputs only the ones that result to true.
+    } //Tests 400 random "roman" strings, shows the ones that yield a contradiction between the output of romanNumberValidator and the actual answer.
 
     public static void specificTester(String input) {
         System.out.print(input + ": ");
