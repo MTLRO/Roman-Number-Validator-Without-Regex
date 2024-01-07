@@ -193,7 +193,7 @@ public class RomanNumbers {
         if (count == 0) {
             System.out.println("No false negatives until " + amount + ".");
         }
-    } //Generates a specific amount of valid roman numbers.
+    } //Generates a specific amount of valid roman numbers and tests them. If the output of romanNumberValidator is false, it will output.
 
     //romanNumberValidator
     public static boolean romanNumberValidator(String number) {
